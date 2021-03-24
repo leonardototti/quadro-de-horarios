@@ -210,11 +210,30 @@ p.subtitle {
     align-items: center;
     margin-top: 10px;
     width: 100%;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.subtitles-container .square {
-    margin-left: 20px;
+.subtitles-container .subtitles-ul {
+    display: flex;
+    margin-bottom: 0!important;
+    column-gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* @media(max-width: 576px) {
+    .subtitles-container .subtitles-ul {
+        gap: 0px!important;
+    }
+} */
+
+.subtitles-container .subtitles-ul li {
+    list-style: none;
+}
+
+.subtitles-container .subtitles-ul .square::before {
+    content: "";
+    display: inline-block;
     margin-right: 5px;
     min-width: 15px;
     min-height: 15px;
@@ -223,13 +242,10 @@ p.subtitle {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.subtitles-container .square::before {
-    content: "";
-    display: flex;
-    margin-right: 5px;
-    min-width: 15px;
-    min-height: 15px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.subtitles-container .subtitles-ul .square.green::before {
+    background-color: #34A853;
+}
+
+.subtitles-container .subtitles-ul .square.blue::before {
+    background-color: #052CFF;
 }

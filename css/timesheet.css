@@ -8,10 +8,6 @@
 
 }
 
-*:focus {
-    outline: 0 !important;
-}
-
 body {
     position: relative;
     overflow-x: hidden;
@@ -41,9 +37,28 @@ body .background-text {
     user-select: none;
 }
 
-.row {
-    margin-right: 0!important;
-    margin-left: 0!important;
+body .back-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #f1641f;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+body .back-icon:hover {
+    background-color: #e94d00;
+}
+
+body .back-icon i {
+    font-size: 22px;
 }
 
 @media(max-width: 1120px) {
@@ -109,16 +124,15 @@ section .logo {
     border-radius: 15px;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
-    position: relative;
 }
 
 /* Ajustando algumas coisas no breakpoint de 576 pixeis */
 @media(max-width: 576px) {
     .content {
-        padding: 30px!important;
+        padding: 20px!important;
     }
     h1.title {
-        font-size: 48px!important;
+        font-size: 40px!important;
     }
     .background-text {
         display: none!important;
@@ -126,9 +140,6 @@ section .logo {
     .container {
         padding-left: 0!important;
         padding-right: 0!important;
-    }
-    .buttons-container {
-        justify-content: center!important;
     }
 }
 
@@ -139,7 +150,6 @@ h1.title {
     font-weight: 700;
     width: 100%;
     user-select: none;
-    z-index: 2;
 }
 
 /* Estilo do subtítulo */
@@ -147,9 +157,44 @@ p.subtitle {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     user-select: none;
-    z-index: 2;
 }
 
+/* Estilos da tabela */
+.table-container table {
+    color: white;
+    margin-bottom: 0!important;
+    border: 2px solid white;
+}
+
+.table-container table thead tr {
+    background-color: white;
+    color: #706f6f;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+.table-container table thead th {
+    width: 16.6666666667%;
+}
+
+.table-container table tbody * {
+    font-size: 15px;
+}
+
+.table-container table th, .table-container table td {
+    text-align: center;
+    padding: .75rem .3rem!important;
+    min-width: 140px;
+}
+
+.table-container .table-hour {
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.table-container .class-link {
+    color: white;
+}
 
 /* Estilos do texto do rodapé */
 .copyright {
@@ -183,31 +228,48 @@ p.subtitle {
     }
 }
 
-.buttons-container {
+/* Estilos da legenda da tabela */
+.subtitles-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 50px 0px;
-    z-index: 2;
-    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.button-course {
-    outline: none;
-    border: 0;
-    background-color: white;
-    border-radius: 15px;
-    padding: 12px 30px;
-    color: #f39200;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
-    z-index: 2;
+.subtitles-container .subtitles-ul {
+    display: flex;
+    margin-bottom: 0!important;
+    column-gap: 15px;
+    flex-wrap: wrap;
 }
 
-.course-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 5%;
-    opacity: .05;
-    z-index: 1;
+/* @media(max-width: 576px) {
+    .subtitles-container .subtitles-ul {
+        gap: 0px!important;
+    }
+} */
+
+.subtitles-container .subtitles-ul li {
+    list-style: none;
+}
+
+.subtitles-container .subtitles-ul .square::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    min-width: 15px;
+    min-height: 15px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.subtitles-container .subtitles-ul .square.green::before {
+    background-color: #34A853;
+}
+
+.subtitles-container .subtitles-ul .square.blue::before {
+    background-color: #052CFF;
 }

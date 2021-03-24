@@ -21,57 +21,18 @@
     <title>Quadro de Horários - Unifil</title>
 </head>
 <body style="opacity: 0;">
-    <span class="background-text"><span>Engenharia</span> <span>de</span> <span>Software</span></span>
+    <span class="background-text"><span>Escolha</span> <span>seu</span> <span>Curso</span></span>
     <main class="container">
         <section>
             <img class="logo" src="./img/logo-unifil.png" width="150px" alt="Logo Unifil">
-            <div class="content js-tilt">
-                <h1 class="title">Quadro de Horários</h1>
-                <p class="subtitle">Clique em algum horário para acessar o respectivo link da aula.</p>
-                <div class="table-responsive table-container">
-                    <table class="table table-borderless">
-                        <thead>
-                            <tr>
-                                <th>ENSW301K</th>
-                                <th>Segunda</th>
-                                <th>Terça</th>
-                                <th>Quarta</th>
-                                <th>Quinta</th>
-                                <th>Sexta</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="table-hour">19h00 - 20h30</td>
-                                <td><a class="class-link" href="https://meet.google.com/fjq-jesx-oub" target="_blank" rel="noopener noreferrer">Desenv. de Aplicativos Móveis<br/>Adail<br/>Lab 3 (6p2kfwf)</a></td>
-                                <td><a class="class-link" href="https://meet.google.com/fjq-jesx-oub" target="_blank" rel="noopener noreferrer">Desenv. de Aplicativos Móveis<br/>Adail<br/>Lab 3 (6p2kfwf)</a></td>
-                                <td style="background-color: #34A853;"><a class="class-link" href="https://meet.google.com/fjq-jesx-oub" target="_blank" rel="noopener noreferrer">Intro. a Computação e TGS<br/>Adail<br/>Sala 121 (ig4g7zs)</a></td>
-                                <td><a class="class-link" href="https://meet.google.com/qut-eztb-pxd" target="_blank" rel="noopener noreferrer">Lógica e Prog. de Algoritmos<br/>Edson<br/>Lab 3 (j3mrf2i)</a></td>
-                                <td><a class="class-link" href="https://meet.google.com/qut-eztb-pxd" target="_blank" rel="noopener noreferrer">Lógica e Prog. de Algoritmos<br/>Edson<br/>Lab 3 (j3mrf2i)</a></td>
-                            </tr>
-                            <tr style="background-color: rgba(0,0,0,.03);">
-                                <td class="table-hour">20h30 - 20h45</td>
-                                <td colspan="5">Intervalo</td>
-                            </tr>
-                            <tr>
-                                <td class="table-hour">20h45 - 22h15</td>
-                                <td style="background-color: #34A853;"><a class="class-link" href="https://meet.google.com/ocj-pbsf-dhw" target="_blank" rel="noopener noreferrer">Gestão de Pessoas<br/>Sergio<br/>Sala 121 - (n2zjlzw)</a></td>
-                                <td style="background-color: #052CFF;"><a class="class-link" href="https://meet.google.com/iuu-sivp-kcq" target="_blank" rel="noopener noreferrer">Projeto Inter. I<br/>Tania<br/>(s7zjnf6)</a></td>
-                                <td><a class="class-link" href="https://meet.google.com/ucd-uqkr-djh" target="_blank" rel="noopener noreferrer">Gerência de Requi.<br/>Anderson<br/>Lab 3 (e4kepol)</a></td>
-                                <td><a class="class-link" href="https://meet.google.com/ucd-uqkr-djh" target="_blank" rel="noopener noreferrer">Gerência de Requi.<br/>Anderson<br/>Lab 3 (e4kepol)</a></td>
-                                <td><a class="class-link" href="https://meet.google.com/iuu-sivp-kcq" target="_blank" rel="noopener noreferrer">Projeto Inter. I<br/>Tania<br/>(s7zjnf6)</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="content">
+                <h1 class="title">Escolha seu curso</h1>
+                <p class="subtitle">Clique em um dos botões para acessar o respectivo quadro de horários.</p>
+                <div class="row buttons-container">
+                    <button onclick="location.href = '/ciencias.html';" class="button-course">Ciências da Computação</button>
+                    <button onclick="location.href = '/engenharia.html';" class="button-course">Engenharia de Software</button>
                 </div>
-                <div class="subtitles-container">
-                    <ul class="subtitles-ul">
-                        <li>Legenda: </li>
-                        <li class="square green">Aulas ministradas virtualmente</li>
-                        <li class="square blue">Aulas não sei</li>
-                    </ul>
-                    <div class="course-title">Engenharia de Software</div>
-                </div>
+            <img class="course-icon" width="auto" height="65%" src="./img/icon.png" alt="Curso">
             </div>
             <p class="copyright">Desenvolvido por <a target="_blank" rel="noreferrer noopener" href="https://github.com/leoctotti">Leonardo Totti</a></p>
         </section>
@@ -89,11 +50,5 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <script>
-        $('.js-tilt').tilt({
-            maxTilt: 1,
-        })
-    </script>
 </body>
 </html>

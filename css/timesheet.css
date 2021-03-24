@@ -274,6 +274,6 @@ p.subtitle {
     background-color: #34A853;
 }
 
-.subtitles-container .subtitles-ul .square.blue::before {
-    background-color: #052CFF;
+.subtitles-container .subtitles-ul .square.gray::before {
+    background-color: #706F6F;
 }

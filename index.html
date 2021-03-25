@@ -39,7 +39,7 @@
     <main class="container">
         <section>
             <img class="logo" src="./img/logo-unifil.png" width="150px" height="auto" alt="Logo Unifil">
-            <div class="content">
+            <div class="content js-tilt">
                 <h1 class="title">Escolha seu curso</h1>
                 <p class="subtitle">Clique em um dos botões para acessar o respectivo quadro de horários.</p>
                 <div class="row buttons-container">
@@ -64,5 +64,11 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            maxTilt: 1,
+        })
+    </script>
 </body>
 </html>
